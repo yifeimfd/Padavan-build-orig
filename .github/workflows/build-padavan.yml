@@ -40,10 +40,10 @@ jobs:
       env:
         TNAME: K2P-5.0
       run: |
-        cd /opt/rt-n56u/trunk
-        
-        sed -i 's/bintray.com\/htop\/source\/download_file\?file_path=htop-3.0.2.tar.gz/github.com\/yifeimfd\/rt-n56u\/raw\/master\/trunk\/user\/htop\/htop-3.0.2.tar.gz/g' user/htop/Makefile 
+        cd /opt/rt-n56u/trunk/user/htop/
+        wget https://github.com/yifeimfd/Padavan-build-orig/raw/master/public/user/htop/htop-3.0.2.tar.gz 
 
+        cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
         exit 1
